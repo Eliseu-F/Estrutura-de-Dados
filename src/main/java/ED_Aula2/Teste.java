@@ -10,16 +10,22 @@ public class Teste {
         Vetor vetor = new Vetor(5);
 
         try {
-            vetor.adiciona("elemento 1");
-            vetor.adiciona("elemento 2");
-            vetor.adiciona("elemento 3");
-            vetor.adiciona("elemento 4");
-            vetor.adiciona("elemento 5");             
+            for(int i=0; i <= 10; i++){
+                vetor.adiciona("elemento "+i);
+            }
+            
+
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+       // System.out.println(vetor.adicionaInicio(0, "elemento 0"));
+        
+       vetor.remove(2);
+        
         System.out.println("Tamanho do vetor: " + vetor.tamanho());
-        System.out.println("Informações dentro do array: "+vetor.toString());
-        System.out.println(vetor.busca(6));
+        
+        System.out.println("Informações dentro do array: " + vetor.toString());
+
     }
 }
